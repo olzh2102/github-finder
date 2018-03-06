@@ -7,10 +7,10 @@ class Github {
 	async getUser(user) {
 		const profileResponse = await fetch(`https://api.github.com/users/${user}?client_id=${this.client_id}&client_secret=${this.client_secret}`);
 
-		const profileData = await profileResponse.json();
+		const profile = await profileResponse.json();
 
 		return {
-			profile // profile: profile
+			profile
 		}
 	}
 }
